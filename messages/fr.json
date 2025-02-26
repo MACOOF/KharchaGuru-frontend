@@ -1,0 +1,216 @@
+{
+  "Common": {
+    "getStarted": "Commencer",
+    "switchLanguage": "Changer de langue"
+  },
+  "HomePage": {
+    "DeveloperSection": {
+      "title": "Rencontrez nos développeurs",
+      "bio": {
+        "ayush": "Expert en développement Next.js, PostgreSQL et Node.js. Passionné par la création d'interfaces utilisateur intuitives soutenues par des architectures serveur robustes.",
+        "dhruv": "Expert en développement Next.js, PostgreSQL et Node.js. Se concentre sur la création de solutions de bases de données évolutives et d'applications web réactives.",
+        "sarthak": "Expert en développement Next.js, PostgreSQL et Node.js. Dédié à la construction de solutions efficaces et à l'exploration de nouvelles technologies."
+      },
+      "role": "Développeur Full Stack",
+      "socials": {
+        "email": "Email {name}",
+        "linkedin": "LinkedIn de {name}",
+        "twitter": "Twitter de {name}",
+        "github": "GitHub de {name}"
+      }
+    },
+    "heroTitle": "Prenez le contrôle de vos dépenses dès aujourd'hui.",
+    "heroTagline": "Suivez vos dépenses, libérez vos économies !",
+    "heroTagline2": "Transformez vos dépenses en liberté financière !",
+    "heroDescription": "Spendwise vous permet de prendre des décisions financières éclairées. Nos outils intuitifs vous aident à visualiser vos habitudes de dépenses, à établir des budgets réalistes et à atteindre vos objectifs financiers facilement.",
+    "startJourney": "Commencez votre voyage",
+    "whySpendwise": "Pourquoi Spendwise ?",
+    "userTestimonials": "Ce que disent nos utilisateurs",
+    "readyToTakeControl": "Prêt à prendre le contrôle ?",
+    "discoverFinancialFreedom": "Découvrez la liberté financière avec Spendwise – permettant aux utilisateurs de maîtriser leurs finances et de gérer les dépenses de groupe sans effort.",
+    "getStartedFree": "Commencez gratuitement",
+    "noCreditCard": "Aucune carte de crédit requise. Commencez à gérer vos finances en quelques minutes.",
+    "faq": "Foire aux questions",
+
+    "features": {
+      "easyToUse": {
+        "title": "Facile à utiliser",
+        "description": "Notre interface facile à utiliser simplifie le suivi de vos dépenses et vous permet de rester maître de vos finances."
+      },
+      "financialInsights": {
+        "title": "Perspectives financières",
+        "description": "Obtenez des rapports détaillés et des visualisations pour comprendre où va votre argent et comment économiser plus efficacement."
+      },
+      "dailyTracking": {
+        "title": "Suivi quotidien",
+        "description": "Enregistrez et catégorisez facilement vos dépenses quotidiennes, pour rester au courant de vos habitudes de consommation."
+      },
+      "groupExpenses": {
+        "title": "Dépenses de groupe",
+        "description": "Créez des groupes pour organiser les dépenses partagées, diviser les coûts et régler facilement avec vos amis et votre famille."
+      },
+      "categorization": {
+        "title": "Catégorisation",
+        "description": "Notre système intelligent catégorise automatiquement vos dépenses en fonction de leur description, vous faisant gagner du temps et des efforts."
+      },
+      "aiDrivenInsights": {
+        "title": "Perspectives basées sur l'IA",
+        "description": "Obtenez des recommandations et des insights personnalisés sur vos dépenses grâce à l'intelligence artificielle, pour des décisions financières plus intelligentes."
+      }
+    },
+
+    "testimonials": {
+      "yash": {
+        "name": "Yash Kakadiya",
+        "quote": [
+          "Spendwise a ",
+          "complètement transformé",
+          " la façon dont je gère mes finances !"
+        ]
+      },
+      "meet": {
+        "name": "Meet Gangani",
+        "quote": [
+          "Je n'ai jamais été aussi conscient de mes habitudes de dépenses. ",
+          "Fortement recommandé !",
+          ""
+        ]
+      },
+      "akshay": {
+        "name": "Akshay Lakkad",
+        "quote": [
+          "Les perspectives fournies par Spendwise sont inestimables. C'est un ",
+          "changement radical !",
+          ""
+        ]
+      }
+    },
+
+    "faqs": {
+      "what": {
+        "question": "Qu'est-ce que Spendwise ?",
+        "answer": "Spendwise est une application gratuite de finances personnelles conçue pour suivre les dépenses, gérer efficacement les budgets et organiser les dépenses de groupe."
+      },
+      "getStarted": {
+        "question": "Comment commencer ?",
+        "answer": "Inscrivez-vous, commencez à entrer vos dépenses manuellement ou importez vos transactions depuis votre relevé bancaire, définissez vos objectifs de budget et invitez des amis à partager les dépenses si nécessaire."
+      },
+      "dataSafety": {
+        "question": "Mes données sont-elles sécurisées ?",
+        "answer": "Votre vie privée et votre sécurité sont nos priorités absolues. Nous utilisons des mesures strictes pour garder vos informations en sécurité et confidentielles."
+      },
+      "isFree": {
+        "question": "Est-ce gratuit ?",
+        "answer": "Oui, Spendwise est entièrement gratuit. Profitez d'outils puissants de gestion financière sans frais."
+      }
+    }
+  },
+  "auth": {
+    "create-account": "Créer un compte",
+    "already-have-account": "Vous avez déjà un compte ?",
+    "name": "Nom",
+    "enter-name": "Entrez votre nom",
+    "email": "Email",
+    "enter-email": "Entrez votre email",
+    "password": "Mot de passe",
+    "enter-password": "Entrez votre mot de passe",
+    "register": "S'inscrire",
+    "registering": "Inscription de l'utilisateur...",
+    "weak-password": "Veuillez définir un mot de passe plus fort",
+    "spendwise-register": "Spendwise - Inscription",
+    "spendwise-login": "Spendwise - Connexion",
+    "validation": {
+      "email-empty": "Le champ email est vide !",
+      "name-empty": "Le champ nom est vide !",
+      "password-min": "Le mot de passe doit comporter au moins 8 caractères",
+      "password-regex": "Le mot de passe doit inclure des chiffres (0-9), des symboles spéciaux (@, #, &...), des lettres majuscules (A-Z) et minuscules (a-z)",
+      "passwords-match": "Les mots de passe ne correspondent pas",
+      "email-required": "L'email est requis"
+    },
+    "loading": {
+      "preparing": "Préparation de vos insights financiers",
+      "crunching": "Analyse des chiffres",
+      "balancing": "Équilibrage des comptes",
+      "counting": "Comptage de vos roupies",
+      "maximizing": "Maximisation de vos économies",
+      "optimizing": "Optimisation de votre budget",
+      "empowering": "Donner du pouvoir à chaque roupie",
+      "money-maximized": "Votre argent, maximisé",
+      "track-smart": "Suivez intelligemment, dépensez sagement",
+      "savings": "Économies à chaque geste",
+      "financial-clarity": "Clarté financière en un clic",
+      "spend-confidence": "Dépensez avec confiance, économisez facilement",
+      "master-money": "Maîtrisez votre flux d'argent",
+      "budgeting": "Budgétisation rendue brillante",
+      "finances-optimized": "Vos finances, entièrement optimisées",
+      "effortless": "Suivi sans effort, dépenses plus intelligentes",
+      "track-with": "Suivez avec Spendwise",
+      "spendwise": "Spendwise"
+    },
+    "Login": {
+      "header": "Connectez-vous à votre compte",
+      "backButton": {
+        "label": "Vous n'avez pas de compte ?"
+      },
+      "twoFactor": {
+        "label": "Code à deux facteurs",
+        "confirm": "Confirmer"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "xyz@gmail.com"
+      },
+      "password": {
+        "label": "Mot de passe",
+        "placeholder": "Entrez votre mot de passe",
+        "forgot": "Mot de passe oublié ?"
+      },
+      "submit": "Se connecter par email",
+      "error": {
+        "oauth": "Email déjà utilisé avec un autre fournisseur !",
+        "generic": "Quelque chose s'est mal passé"
+      }
+    },
+    "error": {
+      "title": "Oups ! Quelque chose s'est mal passé !",
+      "errors": {
+        "configuration": "Essayez de vous connecter sans Google"
+      },
+      "backButton": "Retour à la connexion"
+    },
+    "resetPassword": {
+      "header": "Mot de passe oublié ?",
+      "backButton": {
+        "text": "Vous n'avez pas de compte ?",
+        "href": "/auth/signup"
+      },
+      "emailLabel": "Email",
+      "emailPlaceholder": "Entrez votre email",
+      "submitButton": "Envoyer un email de réinitialisation",
+      "loadingMessage": "Envoi de l'email de réinitialisation...",
+      "successMessage": "Email de réinitialisation envoyé avec succès !",
+      "errorMessage": "Une erreur s'est produite lors de l'envoi de l'email."
+    },
+    "verification": {
+      "header": "Confirmation de votre vérification",
+      "back": "Retour à la connexion",
+      "missingToken": "Jeton manquant",
+      "errorGeneral": "Quelque chose s'est mal passé"
+    },
+    "newPassword": {
+      "header": "Entrez un nouveau mot de passe",
+      "backButton": {
+        "text": "Retour à la connexion",
+        "href": "/auth/signin"
+      },
+      "passwordLabel": "Mot de passe",
+      "passwordPlaceholder": "Entrez votre mot de passe",
+      "confirmPasswordLabel": "Confirmez le mot de passe",
+      "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+      "submitButton": "Réinitialiser le mot de passe",
+      "loadingMessage": "Changement de mot de passe...",
+      "successMessage": "Votre mot de passe a été mis à jour avec succès !",
+      "errorMessage": "Une erreur s'est produite lors de la mise à jour du mot de passe."
+    }
+  }
+}

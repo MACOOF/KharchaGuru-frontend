@@ -1,0 +1,216 @@
+{
+  "Common": {
+    "getStarted": "Get Started",
+    "switchLanguage": "Switch language"
+  },
+  "HomePage": {
+    "DeveloperSection": {
+      "title": "Meet Our Developers",
+      "bio": {
+        "ayush": "Expert in Next.js, PostgreSQL, and Node.js development. Passionate about creating intuitive user interfaces backed by robust server architectures.",
+        "dhruv": "Expert in Next.js, PostgreSQL, and Node.js development. Focuses on creating scalable database solutions and responsive web applications.",
+        "sarthak": "Expert in Next.js, PostgreSQL, and Node.js development. Dedicated to building efficient solutions and exploring new technologies."
+      },
+      "role": "Full Stack Developer",
+      "socials": {
+        "email": "Email {name}",
+        "linkedin": "{name}'s LinkedIn",
+        "twitter": "{name}'s Twitter",
+        "github": "{name}'s GitHub"
+      }
+    },
+    "heroTitle": "Take control of your expenses today.",
+    "heroTagline": "Track your spending, unleash your saving!",
+    "heroTagline2": "Transform expenses into financial freedom!",
+    "heroDescription": "Spendwise empowers you to make informed financial decisions. Our intuitive tools help you visualize your spending patterns, set realistic budgets, and achieve your financial goals with ease.",
+    "startJourney": "Start Your Journey",
+    "whySpendwise": "Why Spendwise?",
+    "userTestimonials": "What ,Our Users Say",
+    "readyToTakeControl": "Ready to Take Control?",
+    "discoverFinancialFreedom": "Discover financial freedom with Spendwise – empowering users to master their finances and manage group expenses effortlessly.",
+    "getStartedFree": "Get Started for Free",
+    "noCreditCard": "No credit card required. Start managing your finances in minutes.",
+    "faq": "Frequently Asked Questions",
+
+    "features": {
+      "easyToUse": {
+        "title": "Easy to use",
+        "description": "Our easy-to-use interface makes it simple to track your expenses and stay on top of your finances."
+      },
+      "financialInsights": {
+        "title": "Financial Insights",
+        "description": "Get detailed reports and visualizations to understand where your money goes and how to save more effectively."
+      },
+      "dailyTracking": {
+        "title": "Daily Tracking",
+        "description": "Easily log and categorize your daily expenses, ensuring you stay on top of your spending habits."
+      },
+      "groupExpenses": {
+        "title": "Group Expenses",
+        "description": "Create groups to organize shared expenses, split costs, and settle up easily with friends and family."
+      },
+      "categorization": {
+        "title": "Categorization",
+        "description": "Our smart system automatically categorizes your expenses based on the description, saving you time and effort."
+      },
+      "aiDrivenInsights": {
+        "title": "AI-Driven Insights",
+        "description": "Get personalized spending insights and recommendations powered by AI, helping you make smarter financial decisions."
+      }
+    },
+
+    "testimonials": {
+      "yash": {
+        "name": "Yash Kakadiya",
+        "quote": [
+          "Spendwise has ",
+          "completely transformed",
+          " how I manage my finances!"
+        ]
+      },
+      "meet": {
+        "name": "Meet Gangani",
+        "quote": [
+          "I've never been so aware of my spending habits. ",
+          "Highly recommended!",
+          ""
+        ]
+      },
+      "akshay": {
+        "name": "Akshay Lakkad",
+        "quote": [
+          "The insights provided by Spendwise are invaluable. It's a ",
+          "game-changer!",
+          ""
+        ]
+      }
+    },
+
+    "faqs": {
+      "what": {
+        "question": "What is Spendwise?",
+        "answer": "Spendwise is a free personal finance app designed to track expenses, manage budgets effectively, and handle group expenses."
+      },
+      "getStarted": {
+        "question": "How do I get started?",
+        "answer": "Sign up, start entering expenses manually or import transactions from your bank statement, set your budget goals, and invite friends to split expenses if needed."
+      },
+      "dataSafety": {
+        "question": "Is my data safe?",
+        "answer": "Your privacy and security are our top priorities. We use stringent measures to keep your information safe and confidential."
+      },
+      "isFree": {
+        "question": "Is it free?",
+        "answer": "Yes, Spendwise is completely free to use. Enjoy powerful financial management tools without any fees."
+      }
+    }
+  },
+  "auth": {
+    "create-account": "Create an account",
+    "already-have-account": "Already have an account?",
+    "name": "Name",
+    "enter-name": "Enter Your Name",
+    "email": "Email",
+    "enter-email": "Enter your Email",
+    "password": "Password",
+    "enter-password": "Enter your Password",
+    "register": "Register",
+    "registering": "Registering user...",
+    "weak-password": "Please set a stronger password",
+    "spendwise-register": "Spendwise - Register",
+    "spendwise-login": "Spendwise - Login",
+    "validation": {
+      "email-empty": "Email field is empty!",
+      "name-empty": "Name field is empty!",
+      "password-min": "Password should be minimum 8 characters",
+      "password-regex": "Password should include digits(0-9),special symbols(@,#,&...),Uppercase (A-Z),lowercase(a-z) letters",
+      "passwords-match": "Passwords don't match",
+      "email-required": "Email is Required"
+    },
+    "loading": {
+      "preparing": "Preparing your financial insights",
+      "crunching": "Crunching the numbers",
+      "balancing": "Balancing the books",
+      "counting": "Counting your rupees",
+      "maximizing": "Maximizing your savings",
+      "optimizing": "Optimizing your budget",
+      "empowering": "Empowering Every Rupee",
+      "money-maximized": "Your Money, Maximized",
+      "track-smart": "Track Smart, Spend Wisely",
+      "savings": "Savings in Every Swipe",
+      "financial-clarity": "Financial Clarity, One Click Away",
+      "spend-confidence": "Spend with Confidence, Save with Ease",
+      "master-money": "Master Your Money Flow",
+      "budgeting": "Budgeting Made Brilliant",
+      "finances-optimized": "Your Finances, Fully Optimized",
+      "effortless": "Effortless Tracking, Smarter Spending",
+      "track-with": "track with spendwise",
+      "spendwise": "SpendWise"
+    },
+    "Login": {
+      "header": "Sign in to your Account",
+      "backButton": {
+        "label": "Don't have an account?"
+      },
+      "twoFactor": {
+        "label": "Two Factor Code",
+        "confirm": "Confirm"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "xyz@gmail.com"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your Password",
+        "forgot": "Forget password?"
+      },
+      "submit": "Login with Mail",
+      "error": {
+        "oauth": "Email already in use with a different provider!",
+        "generic": "Something went wrong"
+      }
+    },
+    "error": {
+      "title": "Oops! Something went wrong!",
+      "errors": {
+        "configuration": "Try logging in without Google"
+      },
+      "backButton": "Back to login"
+    },
+    "resetPassword": {
+      "header": "Forgot your password?",
+      "backButton": {
+        "text": "Don't have an account?",
+        "href": "/auth/signup"
+      },
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter Your Email",
+      "submitButton": "Send reset password email",
+      "loadingMessage": "Sending reset password email...",
+      "successMessage": "Password reset email sent successfully!",
+      "errorMessage": "An error occurred while sending the email."
+    },
+    "verification": {
+      "header": "Confirming your verification",
+      "back": "Back to login",
+      "missingToken": "Missing Token",
+      "errorGeneral": "Something went wrong"
+    },
+    "newPassword": {
+      "header": "Enter a new password",
+      "backButton": {
+        "text": "Back to login",
+        "href": "/auth/signin"
+      },
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "submitButton": "Reset Password",
+      "loadingMessage": "Changing password...",
+      "successMessage": "Your password has been successfully updated!",
+      "errorMessage": "An error occurred while updating the password."
+    }
+  }
+}
