@@ -1,10 +1,16 @@
 "use server"
 import * as  z from "zod"
-import { NewPasswordSchema } from "@/lib/index"
 import { getpasswordResetTokenByToken } from "@/data/password-reset-token";
 import { getUserByEmail } from "@/data/user";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { NewPasswordSchema } from "@/lib/index";
+// import { getSchemas } from "@/lib/index"
+// import { getTranslations } from "next-intl/server";
+// const { NewPasswordSchema } =await (async ()=>{
+//   const t = await getTranslations();
+//   return getSchemas(t);
+// })();
 
 export const newPassword = async(values:z.infer<typeof NewPasswordSchema>,token?:string|null) => {
   if(!token)

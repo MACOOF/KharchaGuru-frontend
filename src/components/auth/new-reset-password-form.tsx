@@ -201,7 +201,7 @@ import {
 import { Input } from "../ui/input";
 import { toast } from "sonner";
 import { newPassword } from "@/actions/auth/new-password";
-import { useSchemas } from "@/lib/index";
+import { getSchemas } from "@/lib/index";
 import { useCallback, useState, useTransition } from "react";
 import zxcvbn from "zxcvbn";
 import { Passwordcmp } from "../Passwordcmp";
@@ -218,7 +218,7 @@ export const NewResetPasswordForm = () => {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
-  const { NewPasswordSchema } = useSchemas();
+  const { NewPasswordSchema } = getSchemas(t);
 
   const form = useForm<z.infer<typeof NewPasswordSchema>>({
     resolver: zodResolver(NewPasswordSchema),

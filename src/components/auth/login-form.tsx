@@ -227,7 +227,7 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { CardWrapper } from "./card-wrapper";
-import { useSchemas } from "@/lib/index";
+import { getSchemas } from "@/lib/index";
 import { useTranslations } from "next-intl";
 
 export const LoginForm = () => {
@@ -238,7 +238,7 @@ export const LoginForm = () => {
   const [isDisabled, setDisabled] = useState<boolean>(false);
   const searchparams = useSearchParams();
 
-  const { SigninSchema } = useSchemas();
+  const { SigninSchema } =  getSchemas(t);
 
   const urlError =
     searchparams.get("error") === "OAuthAccountNotLinked"

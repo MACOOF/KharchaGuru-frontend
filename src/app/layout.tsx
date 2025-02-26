@@ -7,7 +7,6 @@ import Script from "next/script"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleAnalytics } from "@/components/GoogleAnalytics"
-import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" })
@@ -97,7 +96,6 @@ export default async  function RootLayout({
       </head>
       <body className={poppins.className}>
         <Providers messages={messages}>
-          
             {children}
             <Toaster richColors />
             <GoogleAnalytics />

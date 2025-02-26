@@ -114,13 +114,13 @@ import { Input } from "../ui/input";
 import { Resetpass } from "@/actions/auth/reset";
 import { useTransition } from "react";
 import { toast } from 'sonner'
-import { useSchemas } from "@/lib/index";
+import { getSchemas } from "@/lib/index";
 import { useTranslations } from "next-intl";
 
 export const ResetpasswordForm = () => {
   const t = useTranslations("auth.resetPassword");
   const [isPending, startTransition] = useTransition();
-  const { ResetSchema } = useSchemas();
+  const { ResetSchema } = getSchemas(t);
 
   const form = useForm<z.infer<typeof ResetSchema>>({
     resolver: zodResolver(ResetSchema),

@@ -1,5 +1,4 @@
 "use server"
-import { SigninSchema } from "@/lib/index"
 import { signIn } from "@/auth"
 import * as z from "zod"
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes"
@@ -11,6 +10,16 @@ import bcrypt from "bcryptjs"
 import { getTwoFactorConformationByUserId } from "@/data/two-factor-conformation"
 import { AuthError } from "next-auth"
 import nodemailer from "nodemailer"
+import { SigninSchema } from "@/lib"
+
+// import { getSchemas } from "@/lib/index"
+// import { getTranslations } from "next-intl/server";
+
+// const {SigninSchema} =await (async ()=>{
+//   const t = await getTranslations();
+//   return getSchemas(t);
+// })();
+
 
 async function sendVerificationEmail(email: string, token: string,name: string) {
   const VerificationLink = `${process.env.BASE_URL}/auth/new-verification?token=${token}`;

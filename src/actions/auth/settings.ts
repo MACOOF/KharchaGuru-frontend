@@ -3,10 +3,17 @@ import { getUserByEmail, getUserById } from "@/data/user"
 import { currentUserServer } from "@/lib/auth"
 import { db } from "@/lib/db"
 import { generateVerificationToken } from "@/lib/tokens"
-import { SettingsSchema } from "@/lib/index"
 import nodemailer from "nodemailer"
 import * as z from "zod"
 import bcrypt from "bcryptjs"
+import { SettingsSchema } from "@/lib/index"
+// import { getSchemas } from "@/lib/index"
+// import { getTranslations } from "next-intl/server";
+// const { SettingsSchema } =await (async ()=>{
+//   const t = await getTranslations();
+//   return getSchemas(t);
+// })()
+
 
  
 async function sendVerificationEmail(email: string, token: string,name:string) {

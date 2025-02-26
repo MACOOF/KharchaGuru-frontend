@@ -1,9 +1,16 @@
 "use server"
 import { getUserByEmail } from "@/data/user"
-import { generatePasswordResetToken } from "@/lib/tokens"
 import { ResetSchema } from "@/lib/index"
+import { generatePasswordResetToken } from "@/lib/tokens"
 import nodemailer from "nodemailer"
 import { z } from "zod"
+
+// import { getSchemas } from "@/lib/index"
+// import { getTranslations } from "next-intl/server";
+// const { ResetSchema } =await (async ()=>{
+//   const t = await getTranslations();
+//   return getSchemas(t);
+// })();
 
 const sendPasswordResetEmail = async(email: string, token: string,name:string) => {
   const resetLink = `${process.env.BASE_URL}/auth/new-password?token=${token}`

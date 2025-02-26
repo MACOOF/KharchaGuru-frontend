@@ -1,12 +1,18 @@
 "use server"
 import * as z from "zod"
-import { RegisterSchema } from "@/lib/index"
 import bcrypt from "bcryptjs"
 import { db } from "@/lib/db"
 import { getUserByEmail } from "@/data/user"
 import { generateVerificationToken } from "@/lib/tokens"
 import nodemailer from "nodemailer"
+import { RegisterSchema } from "@/lib/index"
 
+// import { getSchemas } from "@/lib/index"
+// import { getTranslations } from "next-intl/server";
+// const { RegisterSchema } =await (async ()=>{
+//   const t = await getTranslations();
+//   return getSchemas(t);
+// })()
 
 async function sendVerificationEmail(email: string, token: string, name: string) {
   const VerificationLink = `${process.env.BASE_URL}/auth/new-verification?token=${token}`

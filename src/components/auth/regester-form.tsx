@@ -20,7 +20,7 @@ import { Input } from "../ui/input";
 import { CardWrapper } from "./card-wrapper";
 import { toast } from 'sonner'
 import { Passwordcmp } from "../Passwordcmp";
-import { useSchemas  } from "@/lib/index";
+import { getSchemas  } from "@/lib/index";
 import { Register } from "../../actions/auth/signup";
 
 export const RegisterForm = () => {
@@ -31,7 +31,7 @@ export const RegisterForm = () => {
     score: 0,
     feedback: ""
   });
-  const { RegisterSchema } = useSchemas();
+  const { RegisterSchema } = getSchemas(t);
 
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
