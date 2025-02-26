@@ -212,5 +212,13 @@
       "successMessage": "Your password has been successfully updated!",
       "errorMessage": "An error occurred while updating the password."
     }
+  },
+  "Navbar": {
+    "dashboard": "Dashboard",
+    "history": "History",
+    "budget": "Budget",
+    "group": "Group",
+    "brand": "Spend",
+    "brandHighlight": "wise"
   }
 }

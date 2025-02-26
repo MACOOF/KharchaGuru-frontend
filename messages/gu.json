@@ -212,5 +212,13 @@
       "successMessage": "તમારો પાસવર્ડ સફળતાપૂર્વક અપડેટ થયો!",
       "errorMessage": "પાસવર્ડ અપડેટ કરતી વખતે ભૂલ આવી."
     }
+  },
+  "Navbar": {
+    "dashboard": "ડેશબોર્ડ",
+    "history": "ઈતિહાસ",
+    "budget": "બજેટ",
+    "group": "સમૂહ",
+    "brand": "સ્પેન્ડ",
+    "brandHighlight": "વાઇઝ"
   }
 }
