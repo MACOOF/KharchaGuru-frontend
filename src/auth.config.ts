@@ -3,6 +3,7 @@ import { NextAuthConfig } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import Google from "next-auth/providers/google"
 import { getUserByEmail } from "./data/user"
+import { SigninSchema } from "./lib"
 // import { getSchemas } from "@/lib/index"
 // import { getTranslations } from "next-intl/server"
 
