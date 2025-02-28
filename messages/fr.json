@@ -220,5 +220,88 @@
     "group": "Groupe",
     "brand": "Spend",
     "brandHighlight": "wise"
+  },
+  "history": {
+    "deletebutton": {
+      "delete": "Supprimer",
+      "confirm": "Confirmer"
+    },
+    "HistoryColumns": {
+      "select": {
+        "ariaLabel": "Tout sélectionner",
+        "rowAriaLabel": "Sélectionner la ligne"
+      },
+      "date": {
+        "label": "Date",
+        "formatFull": "dd MMMM, yyyy",
+        "formatShort": "dd/MM/yyyy"
+      },
+      "amount": {
+        "label": "Montant"
+      },
+      "category": {
+        "label": "Catégorie"
+      },
+      "description": {
+        "label": "Description"
+      },
+      "edit": {
+        "label": "Modifier"
+      }
+    },
+    "DataTable": {
+      "filter": {
+        "placeholder": "Filtrer {key}..."
+      },
+      "columns": {
+        "button": "Colonnes"
+      },
+      "noResults": "Aucun résultat.",
+      "pagination": {
+        "rowsSelected": "{selected} sur {total} ligne(s) sélectionnée(s).",
+        "previous": "Précédent",
+        "next": "Suivant"
+      },
+      "delete": {
+        "loading": "Suppression des transactions!!",
+        "error": "Échec de la suppression des transactions"
+      }
+    },
+    "showOptions": {
+      "title": "Historique des transactions",
+      "showOptions": "Afficher les options",
+      "hideOptions": "Masquer les options",
+      "import": "Importer",
+      "export": "Exporter"
+    }
+  },
+  "newIncome": {
+    "buttonText": "Nouveau revenu 🤑",
+    "dialogTitle": "Créer une nouvelle transaction de <span>revenu</span>",
+    "amount": "Montant",
+    "amountPlaceholder": "Saisir le montant",
+    "description": "Description (Optionnel)",
+    "descriptionPlaceholder": "Saisir la description",
+    "transactionDate": "Date de transaction",
+    "pickDateText": "Choisir une date",
+    "submitLoading": "Ajout en cours...",
+    "submitReady": "Ajouter un nouveau revenu",
+    "successToast": "Revenu ajouté avec succès"
+  },
+  "newExpense": {
+    "buttonText": "Nouvelle dépense 😤",
+    "dialogTitle": "Créer une nouvelle transaction de <span>dépense</span>",
+    "amount": "Montant",
+    "amountPlaceholder": "Saisir le montant",
+    "description": "Description (Optionnel)",
+    "descriptionPlaceholder": "Saisir la description",
+    "category": "Catégorie",
+    "selectCategory": "Sélectionner une catégorie",
+    "suggestedSuffix": "(Suggéré)",
+    "transactionDate": "Date de transaction",
+    "pickDateText": "Choisir une date",
+    "submitLoading": "Création de la dépense...",
+    "submitReady": "Ajouter la dépense",
+    "successToast": "Dépense ajoutée avec succès"
   }
 }

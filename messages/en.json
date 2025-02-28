@@ -220,5 +220,142 @@
     "group": "Group",
     "brand": "Spend",
     "brandHighlight": "wise"
+  },
+  "history": {
+    "deletebutton": {
+      "delete": "Delete",
+      "confirm": "Confirm"
+    },
+    "HistoryColumns": {
+      "select": {
+        "ariaLabel": "Select all",
+        "rowAriaLabel": "Select row"
+      },
+      "date": {
+        "label": "Date",
+        "formatFull": "dd MMMM, yyyy",
+        "formatShort": "dd/MM/yyyy"
+      },
+      "amount": {
+        "label": "Amount"
+      },
+      "category": {
+        "label": "Category"
+      },
+      "description": {
+        "label": "Description"
+      },
+      "edit": {
+        "label": "Edit"
+      }
+    },
+    "DataTable": {
+      "filter": {
+        "placeholder": "Filter {key}..."
+      },
+      "columns": {
+        "button": "Columns"
+      },
+      "noResults": "No results.",
+      "pagination": {
+        "rowsSelected": "{selected} of {total} row(s) selected.",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "delete": {
+        "loading": "Deleting transactions!!",
+        "error": "Failed to delete transaction's"
+      }
+    },
+    "showOptions": {
+      "title": "Transaction History",
+      "showOptions": "Show Options",
+      "hideOptions": "Hide Options",
+      "import": "Import",
+      "export": "Export",
+      "tooltips": {
+        "import": "Add transactions via Bank Statement",
+        "export": "Generate Transaction's Report"
+      }
+    }
+  },
+  "newExpense": {
+    "buttonText": "New Expense 😤",
+    "dialogTitle": "Create a new <span>expense</span> transaction",
+    "amount": "Amount",
+    "amountPlaceholder": "Enter amount",
+    "description": "Description (Optional)",
+    "descriptionPlaceholder": "Enter description",
+    "category": "Category",
+    "selectCategory": "Select a category",
+    "suggestedSuffix": "(Suggested)",
+    "transactionDate": "Transaction Date",
+    "pickDateText": "Pick a date",
+    "submitLoading": "Creating expense...",
+    "submitReady": "Add expense",
+    "successToast": "Expense added successfully",
+    "categories": {
+      "Other": {
+        "label": "Other",
+        "emoji": "🔖"
+      },
+      "Bills": {
+        "label": "Bills",
+        "emoji": "🧾"
+      },
+      "Food": {
+        "label": "Food",
+        "emoji": "🍽️"
+      },
+      "Entertainment": {
+        "label": "Entertainment",
+        "emoji": "🎮"
+      },
+      "Transportation": {
+        "label": "Transportation",
+        "emoji": "🚗"
+      },
+      "EMI": {
+        "label": "EMI",
+        "emoji": "💳"
+      },
+      "Healthcare": {
+        "label": "Healthcare",
+        "emoji": "🏥"
+      },
+      "Education": {
+        "label": "Education",
+        "emoji": "🎓"
+      },
+      "Investment": {
+        "label": "Investment",
+        "emoji": "💼"
+      },
+      "Shopping": {
+        "label": "Shopping",
+        "emoji": "🛒"
+      },
+      "Fuel": {
+        "label": "Fuel",
+        "emoji": "⛽"
+      },
+      "Groceries": {
+        "label": "Groceries",
+        "emoji": "🛍️"
+      }
+    }
+  },
+  "newIncome": {
+    "buttonText": "New Income 🤑",
+    "dialogTitle": "Create a new <span>income</span> transaction",
+    "amount": "Amount",
+    "amountPlaceholder": "Enter amount",
+    "description": "Description (Optional)",
+    "descriptionPlaceholder": "Enter description",
+    "transactionDate": "Transaction Date",
+    "pickDateText": "Pick a date",
+    "submitLoading": "Adding...",
+    "submitReady": "Add new income",
+    "successToast": "Income added successfully"
   }
 }

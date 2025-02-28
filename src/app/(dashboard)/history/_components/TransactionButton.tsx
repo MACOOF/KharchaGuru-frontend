@@ -3,9 +3,11 @@ import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { Download, Upload } from "lucide-react"
+import { useTranslations } from 'next-intl';
 
 export const TransactionButton = () => {
   const router = useRouter();
+  const t = useTranslations("history.showOptions");
 
   const handleImport = () => router.push("/transaction")
   const handleExport = () => router.push("/report")
@@ -19,11 +21,11 @@ export const TransactionButton = () => {
                     onClick={handleImport}
                   >
                     <Upload className="mr-2 h-4 w-4" />
-                    Import
+                    {t("import")}
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Add transactions via Bank Statement</p>
+                  <p>{t("tooltips.import")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -35,11 +37,11 @@ export const TransactionButton = () => {
                     onClick={handleExport}
                   >
                     <Download className="mr-2 h-4 w-4" />
-                    Export
+                    {t("export")}
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Generate Transaction's Report</p>
+                  <p>{t("tooltips.export")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>

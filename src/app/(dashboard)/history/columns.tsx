@@ -15,6 +15,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+
 export type ResponceType = {
   category: CategoryTypes | "Income"
   id: string
@@ -24,7 +25,31 @@ export type ResponceType = {
   description: string | null
 }
 
-export const columns: ColumnDef<ResponceType>[] = [
+type TranslationsType = {
+  select: {
+    ariaLabel: string
+    rowAriaLabel: string
+  }
+  date: {
+    label: string
+    formatFull: string
+    formatShort: string
+  }
+  amount: {
+    label: string
+  }
+  category: {
+    label: string
+  }
+  description: {
+    label: string
+  }
+  edit: {
+    label: string
+  }
+}
+
+export const createColumns = (translations: TranslationsType): ColumnDef<ResponceType>[] => [
   {
     id: "select",
     header: ({ table }) => (
@@ -34,14 +59,14 @@ export const columns: ColumnDef<ResponceType>[] = [
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
+        aria-label={translations.select.ariaLabel}
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
+        aria-label={translations.select.rowAriaLabel}
       />
     ),
     enableSorting: false,
@@ -55,7 +80,7 @@ export const columns: ColumnDef<ResponceType>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Date
+          {translations.date.label}
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
@@ -65,9 +90,11 @@ export const columns: ColumnDef<ResponceType>[] = [
       return (
         <div>
           <span className="hidden sm:block">
-            {format(date, "dd MMMM, yyyy")}
+            {format(date, translations.date.formatFull)}
           </span>
-          <span className="block sm:hidden">{format(date, "dd/MM/yyyy")}</span>
+          <span className="block sm:hidden">
+            {format(date, translations.date.formatShort)}
+          </span>
         </div>
       )
     },
@@ -80,14 +107,13 @@ export const columns: ColumnDef<ResponceType>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Amount
+          {translations.amount.label}
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("amount"))
-
       return (
         <Badge
           variant={amount < 0 ? "destructive" : "primary"}
@@ -108,7 +134,7 @@ export const columns: ColumnDef<ResponceType>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Category
+          {translations.category.label}
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
@@ -119,7 +145,7 @@ export const columns: ColumnDef<ResponceType>[] = [
   },
   {
     accessorKey: "description",
-    header: "Description",
+    header: translations.description.label,
     cell: ({ row }) => {
       if (!row.original.description) return <></>;
   
@@ -149,7 +175,7 @@ export const columns: ColumnDef<ResponceType>[] = [
   {
     id: "Edit",
     accessorKey: "Edit",
-    header: "Edit",
+    header: translations.edit.label,
     cell: ({ row }) => {
       const transaction = row.original
       const isIncome = transaction.category === "Income"
@@ -164,3 +190,28 @@ export const columns: ColumnDef<ResponceType>[] = [
     },
   },
 ]
+
+// Export the columns for use in the DataTable component
+export const columns = createColumns({
+  select: {
+    ariaLabel: "Select all",
+    rowAriaLabel: "Select row",
+  },
+  date: {
+    label: "Date",
+    formatFull: "MMMM d, yyyy",
+    formatShort: "MMM d",
+  },
+  amount: {
+    label: "Amount",
+  },
+  category: {
+    label: "Category",
+  },
+  description: {
+    label: "Description",
+  },
+  edit: {
+    label: "Edit",
+  },
+})

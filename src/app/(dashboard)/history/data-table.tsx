@@ -38,6 +38,7 @@ import { toast } from "sonner"
 import { z } from "zod"
 import DeleteButton from "./_components/Deletebutton"
 import { TableSkeleton } from "./_components/TableSkeleton"
+import { useTranslations } from 'next-intl'
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -81,6 +82,7 @@ export function DataTable<TData, TValue>({
   filterKey,
   disabled,
 }: DataTableProps<TData, TValue>) {
+  const t = useTranslations('history.DataTable')
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -122,11 +124,8 @@ export function DataTable<TData, TValue>({
       category: "Income" | "Expense"
     }[]
   ) => {
-    // console.log("page delete", value);
-
     setdisabled(true)
-
-    const loading = toast.loading("Deleting transactions!!")
+    const loading = toast.loading(t('delete.loading'))
 
     await deleteTransactions({ props: value, id: loading })
     setRowSelection({})
@@ -155,7 +154,7 @@ export function DataTable<TData, TValue>({
     <div>
       <div className="flex items-center py-4">
         <Input
-          placeholder={`Filter ${filterKey}...`}
+          placeholder={t('filter.placeholder', { key: "" })}
           value={(table.getColumn(filterKey)?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("description")?.setFilterValue(event.target.value)
@@ -176,7 +175,7 @@ export function DataTable<TData, TValue>({
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="ml-auto">
-                Columns
+                {t('columns.button')}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -245,7 +244,7 @@ export function DataTable<TData, TValue>({
                   className="h-24 text-center"
                 >
                   {!disabled ? (
-                    "No results."
+                    t('noResults')
                   ) : (
                     <div className="flex flex-col gap-4">
                       {[...Array(10)].map((_, index) => (
@@ -265,8 +264,10 @@ export function DataTable<TData, TValue>({
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} row(s) selected.
+          {t('pagination.rowsSelected', {
+            selected: table.getFilteredSelectedRowModel().rows.length,
+            total: table.getFilteredRowModel().rows.length
+          })}
         </div>
         <Button
           variant="outline"
@@ -274,7 +275,7 @@ export function DataTable<TData, TValue>({
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          Previous
+          {t('pagination.previous')}
         </Button>
         <Button
           variant="outline"
@@ -282,9 +283,10 @@ export function DataTable<TData, TValue>({
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          Next
+          {t('pagination.next')}
         </Button>
       </div>
     </div>
   )
 }
+

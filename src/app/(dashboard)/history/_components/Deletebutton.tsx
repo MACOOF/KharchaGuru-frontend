@@ -2,7 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Trash } from "lucide-react";
+import { useTranslations } from "next-intl";
 const DeleteButton = ({ disabled, handleOnClick, selectedCount }) => {
+  const t = useTranslations("history.deletebutton");
   return (
     <Button
       size="sm"
@@ -25,10 +27,10 @@ const DeleteButton = ({ disabled, handleOnClick, selectedCount }) => {
       />
       <span className="relative overflow-hidden w-[48px]">
         <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">
-          Delete
+          {t("delete")}
         </span>
         <span className="absolute top-0 left-0 inline-block transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-          Confirm
+          {t("confirm")}
         </span>
       </span>
       <span className="ml-1 transition-opacity duration-300 group-hover:opacity-0">

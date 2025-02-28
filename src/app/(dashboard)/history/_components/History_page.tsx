@@ -3,12 +3,15 @@
 import { columns } from "../columns"
 import { DataTable } from "../data-table"
 import { Showoptions } from "./showoptions"
+import { ColumnsWrapper } from './ColumnsWrapper'
 
 interface HistoryPageProps {
   Data: any[]
 }
 
 export default function HistoryPage({ Data }: HistoryPageProps) {
+  const columns = ColumnsWrapper()
+  
   return (
     <div className="mx-auto w-full max-w-7xl p-4 sm:p-6 lg:p-8">
       <div className="mt-20 space-y-6">

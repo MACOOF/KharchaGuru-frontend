@@ -43,37 +43,7 @@ import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import * as z from "zod"
 import { AddnewExpense } from "../action"
-
-// Categories should align with CategoryTypes enum
-const defaultCategories = [
-  "Other",
-  "Bills",
-  "Food",
-  "Entertainment",
-  "Transportation",
-  "EMI",
-  "Healthcare",
-  "Education",
-  "Investment",
-  "Shopping",
-  "Fuel",
-  "Groceries",
-]
-
-const categoryEmojis = {
-  [CategoryTypes.Other]: "🔖",
-  [CategoryTypes.Bills]: "🧾",
-  [CategoryTypes.Food]: "🍽️",
-  [CategoryTypes.Entertainment]: "🎮",
-  [CategoryTypes.Transportation]: "🚗",
-  [CategoryTypes.EMI]: "💳",
-  [CategoryTypes.Healthcare]: "🏥",
-  [CategoryTypes.Education]: "🎓",
-  [CategoryTypes.Investment]: "💼",
-  [CategoryTypes.Shopping]: "🛒",
-  [CategoryTypes.Fuel]: "⛽",
-  [CategoryTypes.Groceries]: "🛍️",
-}
+import { useTranslations } from 'next-intl'
 
 const CategoryTypesSchema = z.nativeEnum(CategoryTypes)
 
@@ -100,7 +70,7 @@ export function NewExpense() {
   const [suggestedCategory, setSuggestedCategory] = useState<CategoryTypes>(
     CategoryTypes.Other
   )
-
+  const t = useTranslations('newExpense')
   const router = useRouter()
 
   const form = useForm<ExpenseFormData>({
@@ -116,7 +86,7 @@ export function NewExpense() {
     try {
       const response = await AddnewExpense(data)
       if (response === "success") {
-        toast.success("Expense added successfully", {
+        toast.success(t('successToast'), {
           closeButton: true,
           icon: "😤",
           duration: 4500,
@@ -156,6 +126,9 @@ export function NewExpense() {
     }
   }, [description, form])
 
+  // Get all category types from the CategoryTypes enum
+  const categories = Object.values(CategoryTypes)
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -164,15 +137,16 @@ export function NewExpense() {
           variant="outline"
           onClick={() => setOpen(true)}
         >
-          New Expense 😤
+          {t('buttonText')}
         </Button>
       </DialogTrigger>
 
       <DialogContent className="w-[95vw] max-w-[425px] p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle className="text-center sm:text-left">
-            Create a new <span className="text-red-500">expense</span>{" "}
-            transaction
+            <span dangerouslySetInnerHTML={{ 
+              __html: t('dialogTitle')
+            }} />
           </DialogTitle>
         </DialogHeader>
 
@@ -187,10 +161,10 @@ export function NewExpense() {
               name="amount"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Amount</FormLabel>
+                  <FormLabel>{t('amount')}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Enter amount"
+                      placeholder={t('amountPlaceholder')}
                       type="number"
                       step="0.01"
                       {...field}
@@ -206,9 +180,9 @@ export function NewExpense() {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description (Optional)</FormLabel>
+                  <FormLabel>{t('description')}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter description" {...field} />
+                    <Input placeholder={t('descriptionPlaceholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -220,7 +194,7 @@ export function NewExpense() {
               name="category"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Category</FormLabel>
+                  <FormLabel>{t('category')}</FormLabel>
                   <FormControl>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -228,14 +202,14 @@ export function NewExpense() {
                           variant="outline"
                           className="w-full justify-between"
                         >
-                          {categoryEmojis[field.value]}{" "}
-                          {field.value || "Select a category"}
+                          {field.value && t(`categories.${field.value}.emoji`)}{" "}
+                          {field.value ? field.value : t('selectCategory')}
                           <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="w-full">
                         <ScrollArea className="h-52 w-full">
-                          {defaultCategories.map((category) => (
+                          {categories.map((category) => (
                             <DropdownMenuItem
                               key={category}
                               onSelect={() => field.onChange(category)}
@@ -247,8 +221,9 @@ export function NewExpense() {
                                     : "opacity-0"
                                 }`}
                               />
-                              {categoryEmojis[category]} {category}
-                              {category === suggestedCategory && " (Suggested)"}
+                              {t(`categories.${category}.emoji`)}{" "}
+                              {category}
+                              {category === suggestedCategory && ` ${t('suggestedSuffix')}`}
                             </DropdownMenuItem>
                           ))}
                         </ScrollArea>
@@ -265,7 +240,7 @@ export function NewExpense() {
               name="transactionDate"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel>Transaction Date</FormLabel>
+                  <FormLabel>{t('transactionDate')}</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -279,7 +254,7 @@ export function NewExpense() {
                           {field.value ? (
                             format(field.value, "PPP")
                           ) : (
-                            <span>Pick a date</span>
+                            <span>{t('pickDateText')}</span>
                           )}
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                         </Button>
@@ -306,7 +281,7 @@ export function NewExpense() {
                 className="w-full border-red-500 text-red-500 hover:bg-red-700 hover:text-white sm:w-auto"
                 disabled={isPending}
               >
-                {isPending ? "Creating expense..." : "Add expense"}
+                {isPending ? t('submitLoading') : t('submitReady')}
               </Button>
             </DialogFooter>
           </form>
